@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/errores.css')}}">
+</head>
+<body>
+    <div class="titulo">
+        <h1>¡ERROR!</h1>
+        <h2>Parece que algo salio mal</h2>
+        <div class="titulo parrafo">
+            <p>Lo sentimos pero el <span>CURP</span> que has ingresado
+            </p>
+            <p>
+                no existe en nuestra base de datos.
+            </p>
+            <p>
+                Te invitamos a presionar el botón
+            </p>
+            <p>
+                para volver a la página principal.
+            </p>
+        </div>
+        <a href="/home" class="boton d-block">VOLVER</a>
+    </div>
+</body>
+</html>

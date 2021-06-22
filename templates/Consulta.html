@@ -1,0 +1,62 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  </head>
+
+<body>  
+  <header class="barra">
+    <a href="/home">
+      <h2>Your<span>HEALTH</span></h2>
+    </a>
+  </header>
+  <!-- formulario de contacto en html y css -->  
+  <div class="contact_form">
+    <div class="formulario">      
+      <h1>Formulario de Consulta</h1>
+        <h3>Favor de llenar todos los campos</h3>
+          <form action="/add_cita" method="post">
+
+                <p>
+                    <label for="curp" class="colocar_nombre">CURP
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="curp" id="curp" required="obligatorio" placeholder="Escribe tu CURP">
+                  </p>
+                  <p>
+                    <label for="fecha" class="colocar_nombre">Fecha para Consulta
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="date" id="fecha" name="fecha"
+                      required="obligatorio"
+                      value="2021-06-18"
+                      min="1990-01-01" max="2021-12-31">
+                  </p>
+                  <p>
+                    <label for="hospital" class="colocar_hospital">Hospital
+                      <span class="obligatorio">*</span>
+                    </label>
+                    <select class="campo__field" name="hospital" id="hospital">
+                      <option value="value2" selected>--Ninguno--</option>
+                      <option value="value1"> Hospital Médica Sur</option>
+                      <option value="value2"> Centro Médico ABC</option>
+                      <option value="value3"> Hospitales Ángeles Lomas </option>
+                      <option value="value3"> Hospital Civil De Guadalajara Juan I</option>
+                    </select>
+                  </p>
+
+                <input type="submit" value="Enviar" class="button">
+
+                <p class="aviso">
+                  <span class="obligatorio"> * </span>Los campos son obligatorios.
+                </p>          
+            
+          </form>
+    </div>  
+  </div>
+
+</body>
+</html>
+

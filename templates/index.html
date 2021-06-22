@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourHEALTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos.css')}}">
+</head>
+<body>
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/home">
+                    <h2>Your<span>HEALTH</span></h2>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="#seccion1">Nosotros</a>
+                    <a href="#seccion2">Operaciones</a>
+                </nav>
+            </div>
+            
+            <div class="header__texto">
+                <h1 class="no-margin">Archivero Médico Decentralizado</h1>
+            </div>
+            
+        </div> <!-- Contenedor -->
+    </header>
+
+    <section class="contenedor seccion" id="seccion1">
+        <h2 class="fw-300 centrar-texto">Más Sobre Nosotros</h2>
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{{url_for('static', filename='img/Seguridad.jpg')}}" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>dolor sit amet consectetur adipisicing elit. Ad, facilis deserunt! 
+                Vel reiciendis eius velit modi qui. Exercitationem, ratione! Quibusdam sit reiciendis 
+                molestias omnis id esse itaque. Iusto, quia ipsa?</p>
+            </div>
+
+            <div class="icono">
+                <img src="{{url_for('static', filename='img/Confianza.jpg')}}" alt="Icono A Tiempo">
+                <h3>Confianza</h3>
+                <p>dolor sit amet consectetur adipisicing elit. Ad, facilis deserunt! 
+                Vel reiciendis eius velit modi qui. Exercitationem, ratione! Quibusdam sit reiciendis 
+                molestias omnis id esse itaque. Iusto, quia ipsa?</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="contenedor seccion" id="seccion2">
+        <h2 class="fw-300 centrar-texto">Operaciones</h2>
+
+        <div class="contenedor-anuncios seccion">
+            <div class="anuncio centrar-texto">
+                    <img src="{{url_for('static', filename='img/Registro.jpg')}}" alt="Registro">
+                    <div class="contenido-anuncio">
+                    <h3>Registro</h3>
+                    <p>Formulario para el registro de datos del paciente.</p>
+                    <a href="/Registro" class="boton boton-amarillo d-block">Registrar</a>
+                </div>
+            </div>
+
+            <div class="anuncio centrar-texto">
+                <img src="{{url_for('static', filename='img/Consulta.jpg')}}" alt="Consulta">
+                <div class="contenido-anuncio">
+                    <h3>Consultar</h3>
+                    <p>Consulta de las citas de pacientes registrados.</p>
+                    <a href="/Consulta" class="boton boton-amarillo d-block">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="#seccion1">Nosotros</a>
+                <a href="#seccion2">Operaciones</a>
+            </nav>
+            <p class="copyright">Todos los Derechos Reservados 2021 &copy;</p>
+        </div>
+    </footer>
+</body>
+</html>

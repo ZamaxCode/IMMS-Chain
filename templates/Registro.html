@@ -1,0 +1,119 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+
+  <header class="barra">
+    <a href="/home">
+      <h2>Your<span>HEALTH</span></h2>
+    </a>
+  </header>
+  <!-- formulario de contacto en html y css -->
+
+  <div class="contact_form">
+
+    <div class="formulario">
+      <h1>Formulario de Registro</h1>
+      <h3>Favor de llenar todos los campos</h3>
+
+      <form action="/mine_block" method="post">
+        <p>
+          <label for="nombre" class="colocar_nombre">Nombre
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+        </p>
+        <p>
+          <label for="curp" class="colocar_nombre">CURP
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="curp" id="curp" required="obligatorio" placeholder="Escribe tu CURP">
+        </p>
+        <p>
+          <label for="fecha" class="colocar_fecha">Fecha de Nacimiento
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="date" name="fecha" id="fecha"
+                 required="obligatorio"
+                 value="2021-06-18"
+                 min="1990-01-01" max="2021-12-31">
+        </p>
+        <p>
+          <label for="estado" class="colocar_estado">Estado
+            <span class="obligatorio">*</span>
+          </label>
+          <select class="campo__field" name="estado" id="estado">
+            <option value="value2" selected>--Ninguno--</option>
+            <option value="value1"> Aguascalientes</option>
+            <option value="value2"> Baja California</option>
+            <option value="value3"> Baja California Sur</option>
+            <option value="value3"> Campeche</option>
+            <option value="value3"> Chiapas</option>
+            <option value="value3"> Chihuahua</option>
+            <option value="value3"> Coahuila de Zaragoza</option>
+            <option value="value3"> Colima</option>
+            <option value="value3"> CDMX</option>
+            <option value="value3"> Durango</option>
+            <option value="value3"> Guanajuato</option>
+            <option value="value3"> Guerrero</option>
+            <option value="value3"> Hidalgo</option>
+            <option value="value3"> Jalisco</option>
+            <option value="value3"> Estado de México</option>
+            <option value="value3"> Michoacan de Ocampo</option>
+            <option value="value3"> Morelos</option>
+            <option value="value3"> Nayarit</option>
+            <option value="value3"> Nuevo León</option>
+            <option value="value3"> Oaxaca</option>
+            <option value="value3"> Puebla</option>
+          </select>
+        </p>
+        <p>
+          <label for="ciudad" class="colocar_ciudad">Ciudad
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="ciudad" id="ciudad" required="obligatorio" placeholder="Escribe tu ciudad">
+        </p>
+        <p>
+          <label for="direccion" class="colocar_direccion">Dirección
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="direccon" id="direccion" required="obligatorio" placeholder="Escribe tu dirección">
+        </p>
+        <p>
+        <p>
+          <label for="codigo" class="colocar_codigo">Codigo Postal
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="codigo" id="codigo" required="obligatorio" placeholder="Escribe tu Codigo Postal">
+        </p>
+        <p>
+          <label for="email" class="colocar_email">Email
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+        </p>
+
+        <p>
+          <label for="telefono" class="colocar_telefono">Teléfono
+          </label>
+          <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+        </p>
+
+        <input type="submit" value="Enviar" class="button">
+
+        <p class="aviso">
+          <span class="obligatorio"> * </span>los campos son obligatorios.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
