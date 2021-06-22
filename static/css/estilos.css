@@ -19,7 +19,9 @@ img{
     margin: 0 auto 0 auto;
 }
 h1{
-    font-size: 3.8rem;
+    font-size: 9rem;
+    color: #FFFFFF;
+    background: rgba(39,39,39,.6);
 }
 h2{
     font-size: 3.4rem;
