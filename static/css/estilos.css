@@ -126,12 +126,20 @@ p{
 /**Opciones de Operación**/
 .iconos-nosotros{
     display: flex;
+    justify-content: space-between;
 }
 .icono{
     flex-basis: calc(50% - 1rem);
     text-align: center;
     line-height: 2;
+
 }
+
+.icono p{
+    color: #000000;
+    background: rgba(39,39,39,.05);
+}
+
 .icono h3{
     text-transform: uppercase;
 }

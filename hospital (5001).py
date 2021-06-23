@@ -180,7 +180,10 @@ def add_cita():
 
 @app.route('/connect_node', methods = ['GET'])
 def connect_node():
-    json = {"nodes": ["http://127.0.0.1:5000"]}
+    json = {"nodes": ["http://127.0.0.1:5000",
+                      "http://127.0.0.1:5002",
+                      "http://127.0.0.1:5003",
+                      "http://127.0.0.1:5004"]}
     nodes = json.get('nodes')
     if nodes is None:
         return 'No node', 401

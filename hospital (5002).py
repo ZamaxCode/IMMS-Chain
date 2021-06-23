@@ -180,8 +180,8 @@ def add_cita():
 
 @app.route('/connect_node', methods = ['GET'])
 def connect_node():
-    json = {"nodes": ["http://127.0.0.1:5001",
-                      "http://127.0.0.1:5002",
+    json = {"nodes": ["http://127.0.0.1:5000",
+                      "http://127.0.0.1:5001",
                       "http://127.0.0.1:5003",
                       "http://127.0.0.1:5004"]}
     nodes = json.get('nodes')
@@ -233,4 +233,4 @@ def error():
 def error2():
     return render_template('errorCurpNotFound.html')
 
-app.run(host='0.0.0.0', port='5000')
+app.run(host='0.0.0.0', port='5002')
