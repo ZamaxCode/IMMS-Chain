@@ -60,8 +60,6 @@ Apartdado de Consulta
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 * [Python](https://www.python.org/downloads/) - El lenguaje usado
 * [Flask](https://pypi.org/project/Flask/) - Herramienta para Python
 * [PyCharm](https://www.jetbrains.com/es-es/pycharm/download/#section=windows) - Entorno utilizado
