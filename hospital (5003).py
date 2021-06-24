@@ -40,9 +40,6 @@ class Blockchain:
 
             except requests.exceptions.RequestException:
                 print(f"El nodo {node} esta desconectado")
-
-
-
         if longest_chain:
             self.chain = longest_chain
             self.total_citas = max_citas
@@ -146,23 +143,11 @@ def mine_block():
         else:
             return redirect(url_for('error'))
 
-
 @app.route('/get_chain', methods=['GET'])
 def get_chain():
     response = {'chain':blockchain.chain,
                 'length':len(blockchain.chain),
                 'cont_citas':blockchain.total_citas}
-    return jsonify(response), 200
-
-
-@app.route('/is_valid', methods=['GET'])
-def is_valid():
-    is_valid=blockchain.is_chain_valid(blockchain.chain)
-    if is_valid:
-        response = {'message':'Todo good, todo verde'}
-    else:
-        response = {'message': 'No chavo, no esta bien'}
-
     return jsonify(response), 200
 
 
@@ -177,7 +162,6 @@ def add_cita():
         else:
             return redirect(url_for('error2'))
 
-
 @app.route('/connect_node', methods = ['GET'])
 def connect_node():
     json = {"nodes": ["http://127.0.0.1:5000",
@@ -191,29 +175,14 @@ def connect_node():
         blockchain.add_node(node)
     return redirect(url_for('home'))
 
-
-@app.route('/replace_chain', methods=['GET'])
-def replace_chain():
-    is_chain_replaced = blockchain.replace_chain()
-    if is_chain_replaced:
-        response = {'message':'Los nodos tenian diferentes cadenas, por lo que sa cambio a la mas larga',
-                    'new_chain':blockchain.chain}
-    else:
-        response = {'message': 'Todo bien, la cadena es la mas larga',
-                    'actual_chain': blockchain.chain}
-    return jsonify(response), 200
-
-
 @app.route('/home', methods=['GET'])
 def home():
     blockchain.replace_chain()
     return render_template('index.html')
 
-
 @app.route('/')
 def root():
     return redirect(url_for('connect_node'))
-
 
 @app.route('/Registro')
 def registro():
